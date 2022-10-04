@@ -1,38 +1,7 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+{% extends 'students/base.html' %}
 
-    
-</head>
-<body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-graduation-cap fa-lg" style="margin-right: 10px;"></i>Student Management System</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-solid fa-list" style="margin-right: 10px;"></i>All Students</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-solid fa-plus" style="margin-right: 10px;"></i>Add Student</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <div class="container-fluid">
-        <h3 class="m-4">All Students</h3>
+{% block body %}
+<h3 class="m-4">All Students</h3>
         <div class="row">
             <div class="col-12">
                 {% if students %}
@@ -74,7 +43,7 @@
                                                         <div class="modal-dialog" role="document">
                                                           <div class="modal-content">
                                                             <div class="modal-header">
-                                                              <h5 class="modal-title">Student: {{ student.first_name }} {{ student.last_name }}</h5>
+                                                              <h5 class="modal-title">Student: <strong>{{ student.first_name }} {{ student.last_name }}</strong></h5>
                                                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true"></span>
                                                               </button>
@@ -118,17 +87,4 @@
                 </div>
             </div>
         </div>
-      </div>
-
-      <footer class="mt-auto mb-4">
-        <div class="text-center">
-            <span>
-                Copyright &copy; <script>document.write(new Date().getFullYear());</script> BK Bagchi
-            </span>
-        </div>
-      </footer>
-
-    {% comment %} bootstrap 5 cdn {% endcomment %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% endblock %}
