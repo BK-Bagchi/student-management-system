@@ -37,7 +37,7 @@ def add(request):
             new_student.save()
 
             return render(request, 'students/add.html', {'form': StudentForm(), 'success': True})
-        else:
-            form = StudentForm()
+    else:
+        form = StudentForm()
 
-        return render(request, 'students/add.html', {'form': StudentForm()})
+    return render(request, 'students/add.html', {'form': StudentForm()})

@@ -12,14 +12,14 @@
             <div class="col-6">
                 <div class="card bg-light mb-3">
                     <div class="card-header">
-                        <i class="fa-solid fa-address-card"></i>Student Registration
+                        <i class="fa-solid fa-address-card" style="margin-right: 10px;"></i>Student Registration
                     </div>
                     <div class="card-body">
                       <form action="{% url 'add' %}" method="POST">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button type="button" class="btn btn-primary">Add</button>
-                        <a href="{% url 'index'%}" class="btn btn-primary">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                        <a href="{% url 'index'%}" class="btn btn-secondary">Cancel</a>
                       </form>
                     </div>
                   </div>
