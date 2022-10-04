@@ -14,8 +14,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['stu-management-sys.herokuapp.com',
                  '127.0.0.1',
-                 'cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
-                 'cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css',
                  ]
 
 
@@ -109,7 +107,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
