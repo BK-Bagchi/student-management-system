@@ -13,7 +13,11 @@ SECRET_KEY = 'django-insecure-_0=%6rzv!v_efknpgwixeu0ty+q98mvi$d=(z784ijx)-=lujb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['stu-management-sys.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['stu-management-sys.herokuapp.com',
+                 '127.0.0.1',
+                 'cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+                 'cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css',
+                 ]
 
 
 # Application definition
